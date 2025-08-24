@@ -1,3 +1,6 @@
+#include <string>
+#include <iostream>
+using namespace std;
 
 enum Token {
   tok_eof = -1,
@@ -56,4 +59,11 @@ static int gettok() {
   int ThisChar = LastChar;
   LastChar = getchar();
   return ThisChar;
+}
+
+int main() {
+  while (true) {
+    int tok = gettok();
+    cout << "got token: " << tok << endl;
+  }
 }
